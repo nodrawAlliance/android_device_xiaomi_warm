@@ -55,8 +55,3 @@ RADIO_FILES := $(notdir $(wildcard $(radio_dir)/*))
 $(foreach f, $(RADIO_FILES), \
     $(call add-radio-file,radio/$(f)))
 endif
-
-#----------------------------------------------------------------------
-# Configs common to AndroidBoard.mk for all targets
-#----------------------------------------------------------------------
-include vendor/qcom/opensource/core-utils/build/AndroidBoardCommon.mk
