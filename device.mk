@@ -324,9 +324,6 @@ PRODUCT_COPY_FILES += \
 #Charger
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti
 
-PRODUCT_BOOT_JARS += tcmiface
-PRODUCT_BOOT_JARS += telephony-ext
-PRODUCT_PACKAGES += telephony-ext
 ifeq ($(TARGET_USES_QMAA), true)
 ifneq ($(TARGET_USES_QMAA_OVERRIDE_ANDROID_CORE),true)
 PRODUCT_ENABLE_QESDK := false
