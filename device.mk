@@ -329,6 +329,9 @@ else
 PRODUCT_ENABLE_QESDK := false
 endif
 
+# QTI Components
+TARGET_COMMON_QTI_COMPONENTS := all
+
 # Vendor property to enable advanced network scanning
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.enableadvancedscan=true
