@@ -352,8 +352,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
 QTI_CAMERA_PROVIDER_SERVICE := 2.7
 QTI_CAMERA_AON_SERVICE := 1.2
 
-DEVICE_FRAMEWORK_MANIFEST_FILE := device/xiaomi/warm/framework_manifest.xml
-
 # Enable compilation of image_generation_tool
 TARGET_USES_IMAGE_GEN_TOOL := true
 
