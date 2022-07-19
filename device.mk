@@ -241,19 +241,6 @@ PRODUCT_PROPERTY_OVERRIDES  += \
 
 ###########
 #----------------------------------------------------------------------
-# wlan specific
-#----------------------------------------------------------------------
-ifeq ($(TARGET_USES_QMAA), true)
-ifneq ($(TARGET_USES_QMAA_OVERRIDE_WLAN), true)
-include device/qcom/wlan/default/wlan.mk
-else
-include device/qcom/wlan/pitti/wlan.mk
-endif
-else
-include device/qcom/wlan/pitti/wlan.mk
-endif
-
-#----------------------------------------------------------------------
 # perf specific
 #----------------------------------------------------------------------
 ifeq ($(TARGET_USES_QMAA), true)
