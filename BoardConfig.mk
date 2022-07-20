@@ -16,10 +16,6 @@ TARGET_CPU_VARIANT := cortex-a76
 
 BOARD_RAMDISK_USE_LZ4 := true
 
--include $(QCPATH)/common/pitti/BoardConfigVendor.mk
-
-SECTOOLS_SECURITY_PROFILE := $(QCPATH)/securemsm/security_profiles/pitti_tz_security_profile.xml
-
 # TODO: Enable it back when we have a path forward
 # Disable generation of dtbo.img
 BOARD_KERNEL_SEPARATED_DTBO := false
