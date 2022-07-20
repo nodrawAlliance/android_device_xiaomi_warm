@@ -160,8 +160,6 @@ TARGET_USES_RRO := true
 ###########
 # Target configurations
 
-QCOM_BOARD_PLATFORMS += pitti
-
 TARGET_USES_QSSI := true
 
 #Default vendor image configuration
