@@ -15,9 +15,6 @@ ro.incremental.enable=yes
 # QTI Fingerprint Solution
 persist.vendor.qfp=true
 
-# qspm
-ro.vendor.qspm.enable=true
-
 # Fuse passthrough
 persist.sys.fuse.passthrough.enable=true
 
