@@ -155,9 +155,6 @@ TARGET_PER_MGR_ENABLED := true
 #Add non-hlos files to ota packages
 ADD_RADIO_FILES := false
 
-# Enable sensor multi HAL
-USE_SENSOR_MULTI_HAL := true
-
 #flag for qspm compilation
 TARGET_USES_QSPM := true
 
