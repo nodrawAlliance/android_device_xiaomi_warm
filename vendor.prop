@@ -18,9 +18,6 @@ persist.vendor.qfp=true
 # qspm
 ro.vendor.qspm.enable=true
 
-# Enable advanced network scanning
-persist.vendor.radio.enableadvancedscan=true
-
 # Fuse passthrough
 persist.sys.fuse.passthrough.enable=true
 
