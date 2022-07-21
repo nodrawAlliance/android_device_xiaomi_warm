@@ -241,16 +241,6 @@ PRODUCT_COPY_FILES += \
 #Charger
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti
 
-ifeq ($(TARGET_USES_QMAA), true)
-ifneq ($(TARGET_USES_QMAA_OVERRIDE_ANDROID_CORE),true)
-PRODUCT_ENABLE_QESDK := false
-else
-PRODUCT_ENABLE_QESDK := false
-endif
-else
-PRODUCT_ENABLE_QESDK := false
-endif
-
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := all
 
