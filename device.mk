@@ -203,6 +203,12 @@ DEVICE_MANIFEST_FILES := \
 
 DEVICE_MATRIX_FILE   := device/qcom/common/compatibility_matrix.xml
 
+# Init
+PRODUCT_PACKAGES += \
+    charger_fw_fstab.qti \
+    fstab.default \
+    init.target.rc
+
 # Kernel modules install path
 KERNEL_MODULES_INSTALL := dlkm
 KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTALL)/lib/modules
@@ -220,9 +226,6 @@ TARGET_MOUNT_POINTS_SYMLINKS := false
 # Fingerprint feature
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
-
-#Charger
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti
 
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := all
