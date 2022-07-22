@@ -208,10 +208,6 @@ PRODUCT_PACKAGES += \
     fstab.default \
     init.target.rc
 
-# Kernel modules install path
-KERNEL_MODULES_INSTALL := dlkm
-KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTALL)/lib/modules
-
 # Dumpstate Feature Flag
 PRODUCT_ENABLE_DUMPSTATE_SUPPORT := true
 
