@@ -56,7 +56,18 @@ VENDOR_SHELL_WHITELIST = {
     "vendor/qcom/proprietary/wigig/wigig_product.mk",
     "vendor/qcom/proprietary/wlan/utils/halproxydaemon/Android.mk",
     "vendor/qcom/proprietary/wlan/utils/qsh_wifi_test/Android.mk",
-
+    "vendor/qcom/proprietary/camx-lib-3a/system/statsalgo/awb/build/android/Android.mk",
+    "vendor/qcom/proprietary/camx-lib-stats/system/statsalgo/aecxcontrol/build/android/Android.mk",
+    "vendor/qcom/proprietary/camx-lib-stats/system/statsalgo/af/build/android/Android.mk",
+    "vendor/qcom/proprietary/camx-lib/Android.mk",
+    "vendor/qcom/proprietary/camx-lib/test/nativetest/Android.mk",
+    "vendor/qcom/proprietary/camx/Android.mk",
+    "vendor/qcom/proprietary/camx/src/mapperutils/extformatutil/build/android/Android.mk",
+    "vendor/qcom/proprietary/chi-cdk-no-ship/Android.mk",
+    "vendor/qcom/proprietary/chi-cdk/Android.mk",
+    "vendor/qcom/proprietary/chi-cdk/api/generated/build/android/Android.mk",
+    "vendor/qcom/proprietary/chi-cdk/core/chiframework/common/build/android/Android.mk",
+    "vendor/qcom/proprietary/chi-cdk/oem/qcom/chiusecase/build/android/Android.mk",
 
 }
 
