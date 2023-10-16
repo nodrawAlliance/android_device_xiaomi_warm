@@ -30,7 +30,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 
 -include $(QCPATH)/common/pitti/BoardConfigVendor.mk
 
-SECTOOLS_SECURITY_PROFILE := $(QCPATH)/securemsm/security_profiles/pitti_tz_security_profile.xml $(QCPATH)/securemsm/security_profiles/cliffs_tz_security_profile.xml
+SECTOOLS_SECURITY_PROFILE := $(QCPATH)/securemsm/security_profiles/pitti_tz_security_profile.xml
 
 USE_OPENGL_RENDERER := true
 
