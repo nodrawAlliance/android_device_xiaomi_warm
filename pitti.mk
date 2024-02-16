@@ -22,8 +22,6 @@ PRODUCT_VENDOR_PROPERTIES += ro.virtual_ab.compression.threads=true
 # Enable debugfs restrictions
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
-#Enable vm support
-TARGET_ENABLE_VM_SUPPORT := true
 
 #Enable SMCI-Listeners.
 TARGET_ENABLE_SMCI_SYSLISTENER := true
@@ -518,12 +516,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Enable Fuse Passthrough
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.fuse.passthrough.enable=true
 
-# ODM ueventd.rc
-# - only for use with VM support right now
-ifeq ($(TARGET_ENABLE_VM_SUPPORT),true)
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/ueventd-odm.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.rc
-PRODUCT_PACKAGES += vmmgr vmmgr.rc vmmgr.conf
-endif
 
 #qspa service
 PRODUCT_PACKAGES += vendor.qti.qspa-service
