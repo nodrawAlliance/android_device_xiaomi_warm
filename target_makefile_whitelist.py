@@ -129,6 +129,7 @@ VENDOR_MACRO_WHITELIST = {
     "vendor/qcom/opensource/mmrm-driver/mmrm_kernel_board.mk",
     "vendor/qcom/opensource/spu-kernel/spu_driver_board.mk",
     "vendor/qcom/opensource/synx-kernel/synx_kernel_board.mk",
+    "vendor/qcom/opensource/synx-kernel/synx_kernel_product.mk",
     "vendor/qcom/opensource/touch-drivers/touch_driver_board.mk",
     "vendor/qcom/opensource/video-driver/video_kernel_board.mk",
     "vendor/qcom/proprietary/android-perf/configs/perf-product-vendor.mk",
