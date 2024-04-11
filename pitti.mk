@@ -245,12 +245,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, device/qcom/vendor-common/common64.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# beluga settings
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.beluga.p=0x3 \
-    ro.vendor.beluga.c=0x4800 \
-    ro.vendor.beluga.s=0x900 \
-    ro.vendor.beluga.t=0x240
+#Product property overrides to configure the Dalvik heap
+PRODUCT_PROPERTY_OVERRIDES  += \
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.heapsize=256m \
+    dalvik.vm.heapgrowthlimit=128m \
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapmaxfree=8m
 
 ###########
 # Target naming
@@ -503,10 +505,10 @@ ifeq ($(TARGET_USES_QMAA), true)
 ifneq ($(TARGET_USES_QMAA_OVERRIDE_ANDROID_CORE),true)
 PRODUCT_ENABLE_QESDK := false
 else
-PRODUCT_ENABLE_QESDK := true
+PRODUCT_ENABLE_QESDK := false
 endif
 else
-PRODUCT_ENABLE_QESDK := true
+PRODUCT_ENABLE_QESDK := false
 endif
 
 # Vendor property to enable advanced network scanning
