@@ -85,11 +85,6 @@ on fs
     mkdir /mnt/vendor/persist/secnvm 0770 system system
     mkdir /mnt/vendor/persist/data 0700 system system
 
-on post-fs
-    #Execute virtualization manager
-    enable vendor.qvirtservice_rs
-    start  vendor.qvirtservice_rs
-
 on late-fs
     wait_for_prop hwservicemanager.ready true
     #exec_start wait_for_keymaster
