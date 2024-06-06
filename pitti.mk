@@ -174,7 +174,7 @@ SHIPPING_API_LEVEL := 34
 PRODUCT_SHIPPING_API_LEVEL := 34
 
 # Set kernel version and ion flags
-TARGET_KERNEL_VERSION := 5.15
+TARGET_KERNEL_VERSION := 6.1
 TARGET_USES_NEW_ION := true
 
 # Disable DLKM generation until build support is available
