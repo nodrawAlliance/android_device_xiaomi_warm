@@ -73,9 +73,9 @@ ifeq ($(ENABLE_AB), true)
 TARGET_NO_RECOVERY := true
 # Defines for enabling A/B builds
 AB_OTA_UPDATER := true
-TARGET_RECOVERY_FSTAB := device/qcom/pitti/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/xiaomi/warm/recovery.fstab
 else
-TARGET_RECOVERY_FSTAB := device/qcom/pitti/recovery_non_AB.fstab
+TARGET_RECOVERY_FSTAB := device/xiaomi/warm/recovery_non_AB.fstab
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 endif

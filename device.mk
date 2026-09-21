@@ -257,11 +257,6 @@ PRODUCT_PROPERTY_OVERRIDES  += \
     dalvik.vm.heapmaxfree=8m
 
 ###########
-# Target naming
-PRODUCT_NAME := pitti
-PRODUCT_DEVICE := pitti
-PRODUCT_BRAND := qti
-PRODUCT_MODEL := pitti for arm64
 #----------------------------------------------------------------------
 # wlan specific
 #----------------------------------------------------------------------
@@ -392,7 +387,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 QTI_CAMERA_PROVIDER_SERVICE := 2.7
 QTI_CAMERA_AON_SERVICE := 1.2
 
-DEVICE_FRAMEWORK_MANIFEST_FILE := device/qcom/pitti/framework_manifest.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := device/xiaomi/warm/framework_manifest.xml
 
 # Enable compilation of image_generation_tool
 TARGET_USES_IMAGE_GEN_TOOL := true
@@ -406,7 +401,7 @@ TARGET_USES_QCV := true
 endif
 
 DEVICE_MANIFEST_SKUS := pitti
-DEVICE_MANIFEST_PITTI_FILES := device/qcom/pitti/manifest_pitti.xml
+DEVICE_MANIFEST_PITTI_FILES := device/xiaomi/warm/manifest_pitti.xml
 
 DEVICE_MATRIX_FILE   := device/qcom/common/compatibility_matrix.xml
 
