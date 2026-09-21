@@ -257,8 +257,9 @@ else
 TARGET_USES_QCV := true
 endif
 
-DEVICE_MANIFEST_SKUS := pitti
-DEVICE_MANIFEST_PITTI_FILES := device/xiaomi/warm/manifest_pitti.xml
+DEVICE_MANIFEST_FILES := \
+    device/xiaomi/warm/manifest_pitti.xml \
+    device/xiaomi/warm/manifest_warm.xml
 
 DEVICE_MATRIX_FILE   := device/qcom/common/compatibility_matrix.xml
 

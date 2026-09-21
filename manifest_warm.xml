@@ -1,0 +1,8 @@
+<manifest version="7.0" type="device" target-level="8">
+    <!-- Xiaomi FX Tunnel -->
+    <hal format="aidl">
+        <name>vendor.xiaomi.hardware.fx.tunnel</name>
+        <version>1</version>
+        <fqname>IMiFxTunnel/default</fqname>
+    </hal>
+</manifest>
