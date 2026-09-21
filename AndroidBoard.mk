@@ -7,7 +7,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := init.target.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+LOCAL_SRC_FILES    := init/$(LOCAL_MODULE)
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
@@ -15,7 +15,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := fstab.default
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES := default/fstab_AB_dynamic_partition.qti
+LOCAL_SRC_FILES := init/fstab_AB_dynamic_partition.qti
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
 
@@ -23,6 +23,6 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := charger_fw_fstab.qti
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := charger_fw_fstab.qti
+LOCAL_SRC_FILES    := init/$(LOCAL_MODULE)
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
