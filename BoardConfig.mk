@@ -55,7 +55,7 @@ BOARD_EXT4_SHARE_DUP_BLOCKS := true
 TARGET_NO_RECOVERY := true
 # Defines for enabling A/B builds
 AB_OTA_UPDATER := true
-TARGET_RECOVERY_FSTAB := device/xiaomi/warm/default/fstab_AB_dynamic_partition.qti
+TARGET_RECOVERY_FSTAB := device/xiaomi/warm/init/fstab_AB_dynamic_partition.qti
 
 BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
@@ -179,7 +179,6 @@ TARGET_PER_MGR_ENABLED := true
 
 #Add non-hlos files to ota packages
 ADD_RADIO_FILES := true
-
 
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
