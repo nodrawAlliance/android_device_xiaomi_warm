@@ -40,10 +40,6 @@ BOARD_API_LEVEL := 34
 # Opt out of 16K alignment changes
 PRODUCT_MAX_PAGE_SIZE_SUPPORTED := 4096
 
-# Set SoC manufacturer property
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.soc.manufacturer=QTI
-
 PRODUCT_BUILD_SYSTEM_IMAGE := true
 PRODUCT_BUILD_SYSTEM_OTHER_IMAGE := false
 PRODUCT_BUILD_VENDOR_IMAGE := true
@@ -141,15 +137,6 @@ TARGET_DEFINES_DALVIK_HEAP := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-#Product property overrides to configure the Dalvik heap
-PRODUCT_PROPERTY_OVERRIDES  += \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heapsize=256m \
-    dalvik.vm.heapgrowthlimit=128m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapmaxfree=8m
-
 ###########
 
 TARGET_USES_QCOM_BSP := false
@@ -185,10 +172,6 @@ PRODUCT_HOST_PACKAGES += \
 
 PRODUCT_PACKAGES += \
   update_engine_sideload
-
-# Enable incremental fs
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.incremental.enable=yes
 
 ifneq (,$(wildcard $(QCPATH)/vsdk-tools))
 PRODUCT_HOST_PACKAGES += \
@@ -283,13 +266,6 @@ TARGET_MOUNT_POINTS_SYMLINKS := false
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
 
-# system prop for enabling QFS (QTI Fingerprint Solution)
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.qfp=true
-#target specific runtime prop for qspm
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qspm.enable=true
-
 #FEATURE_OPENGLES_EXTENSION_PACK support string config file
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
@@ -310,14 +286,6 @@ endif
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := all
 
-# Vendor property to enable advanced network scanning
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.radio.enableadvancedscan=true
-
-# Enable Fuse Passthrough
-PRODUCT_PROPERTY_OVERRIDES += persist.sys.fuse.passthrough.enable=true
-
-
 #qspa service
 PRODUCT_PACKAGES += vendor.qti.qspa-service
 
@@ -329,10 +297,6 @@ PRODUCT_PACKAGES_DEBUG += bti_test_prebuilt \
 ##Armv9-Tests##
 
 PRODUCT_PACKAGES_DEBUG += thermal-test-client
-
-# Mediaserver 64 Bit enable
-PRODUCT_PROPERTY_OVERRIDES += \
-     ro.mediaserver.64b.enable=true
 
 # Enable support for APEX updates
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)

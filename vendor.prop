@@ -1,0 +1,28 @@
+# SoC Manufacturer
+ro.soc.manufacturer=QTI
+
+# Dalvik
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapsize=256m
+dalvik.vm.heapgrowthlimit=128m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapmaxfree=8m
+
+# Enable incremental fs
+ro.incremental.enable=yes
+
+# QTI Fingerprint Solution
+persist.vendor.qfp=true
+
+# qspm
+ro.vendor.qspm.enable=true
+
+# Enable advanced network scanning
+persist.vendor.radio.enableadvancedscan=true
+
+# Fuse passthrough
+persist.sys.fuse.passthrough.enable=true
+
+# Enable 64bit mediaserver
+ro.mediaserver.64b.enable=true
