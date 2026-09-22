@@ -172,3 +172,6 @@ SOONG_CONFIG_ufsbsg_ufsframework := bsg
 SOONG_CONFIG_NAMESPACES += perf
 SOONG_CONFIG_perf += ioctl
 SOONG_CONFIG_perf_ioctl := true
+
+# Include the proprietary files BoardConfig.
+include vendor/xiaomi/warm/BoardConfigVendor.mk

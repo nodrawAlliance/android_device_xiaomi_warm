@@ -300,3 +300,6 @@ PRODUCT_PACKAGES_DEBUG += thermal-test-client
 
 # Enable support for APEX updates
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
+# Inherit Proprietary Vendor
+$(call inherit-product, vendor/xiaomi/warm/warm-vendor.mk)
